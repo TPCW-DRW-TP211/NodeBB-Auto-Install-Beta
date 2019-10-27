@@ -61,8 +61,9 @@ echo "[+] 获取并安装NodeBB"
 cd /home/
 git clone -b v1.12.x https://github.com/NodeBB/NodeBB.git /home/nodebb
 cd nodebb/
-echo "需要手动到http://服务器公网IP:4567进行网页配置"
+echo "[#] 需要手动到http://服务器公网IP:4567进行网页配置"
 sleep 15
+source ~/.bashrc
 echo "[+] 配置进程开始"
 ./nodebb install
 ./nodebb start
@@ -71,7 +72,7 @@ echo "[+] 设置NodeBB开机自启"
 adduser --system --group nodebb
 chown -R nodebb:nodebb /home/nodebb
 echo '[Unit]' > /lib/systemd/system/nodebb.service
-echo 'Description=NodeBB论坛For Node.js' >> /lib/systemd/system/nodebb.service
+echo 'Description=NodeBB Forum For Node.js.' >> /lib/systemd/system/nodebb.service
 echo 'Documentation=http://nodebb.readthedocs.io/en/latest/' >> /lib/systemd/system/nodebb.service
 echo 'After=system.slice multi-user.target' >> /lib/systemd/system/nodebb.service
 echo "" >> /lib/systemd/system/nodebb.service
@@ -91,6 +92,9 @@ echo 'Restart=always' >> /lib/systemd/system/nodebb.service
 echo "" >> /lib/systemd/system/nodebb.service
 echo '[Install]' >> /lib/systemd/system/nodebb.service
 echo 'WantedBy=multi-user.target' >> /lib/systemd/system/nodebb.service
+systemctl enable nodebb
 
 echo "[#] 如果完成了网页配置，那么本次自动配置完成，网页Nginx代理(映射4567端口)请自行设置，或等待作者写完NodeBB映射配置"
+echo "[#] TPLAPETA Inc. - DragonRiverWorld INT Automaic Script - By.TP211 - OpenSource Pubilc"
+echo "[#] 本脚本作者：TP211 配置完成 结束进程"
 exit 0
