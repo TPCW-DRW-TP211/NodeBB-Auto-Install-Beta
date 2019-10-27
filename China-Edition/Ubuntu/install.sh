@@ -66,7 +66,8 @@ git clone -b v1.12.x https://github.com/NodeBB/NodeBB.git /home/nodebb
 cd nodebb/
 echo "[#] 需要手动到http://服务器公网IP:4567进行网页配置"
 sleep 15
-source ~/.bashrc
+sleep 5
+source ~/.bashrc && echo "1"
 echo "[+] 配置进程开始"
 ./nodebb install
 ./nodebb start
