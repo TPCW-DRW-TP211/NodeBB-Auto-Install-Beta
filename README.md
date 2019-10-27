@@ -5,7 +5,7 @@
 
 ### ===Description===
 
-+ Must Be Run As **$\color{#FF3030}{root}$**!
++ Must Be Run As <font color="#ff0000">root</font>!
 + Author Name And Copyright Information Must Be Retained!(But You Can Add The Modifier Name.)
 + This Script Does Not Guarantee A Certain Success, Please Pay Attention Before Use!(If You Have Any Problems, Please Post Issues.)
 
