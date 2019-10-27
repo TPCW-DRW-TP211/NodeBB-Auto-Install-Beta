@@ -70,7 +70,6 @@ sleep 5
 source ~/.bashrc && echo "1"
 echo "[+] 配置进程开始"
 ./nodebb install
-./nodebb start
 
 echo "[+] 设置NodeBB开机自启"
 adduser --system --group nodebb
@@ -100,5 +99,5 @@ systemctl enable nodebb
 
 echo "[#] 如果完成了网页配置，那么本次自动配置完成，网页Nginx代理(映射4567端口)请自行设置，或等待作者写完NodeBB映射配置"
 echo "[#] TPLAPETA Inc. - DragonRiverWorld INT Automaic Script - By.TP211 - OpenSource Pubilc"
-echo "[#] 本脚本作者：TP211 配置完成 结束进程"
+echo "[#] 本脚本作者：TP211 自行启动使用./nodebb start 配置完成 结束进程"
 exit 0
