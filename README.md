@@ -3,10 +3,10 @@
 ##### NodeBB Automatic Installation(Beta)
 (The Author's English Is Very Bad, Please Forgive Me.)
 
-### ===Description===
-1.Must Be Run As **$\color{#FF3030}{root}$**!
-2.Author Name And Copyright Information Must Be Retained!(But You Can Add The Modifier Name.)
-3.This Script Does Not Guarantee A Certain Success, Please Pay Attention Before Use!(If You Have Any Problems, Please Post Issues.)
+### > ===Description===
+> 1.Must Be Run As **$\color{#FF3030}{root}$**!
+> 2.Author Name And Copyright Information Must Be Retained!(But You Can Add The Modifier Name.)
+> 3.This Script Does Not Guarantee A Certain Success, Please Pay Attention Before Use!(If You Have Any Problems, Please Post Issues.)
 
 ### ===Instructions For Use===
 
