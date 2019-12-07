@@ -61,7 +61,7 @@ service redis-server restart
 
 echo "[+] 获取并安装NodeBB"
 cd /home/
-git clone -b v1.12.x https://github.com/NodeBB/NodeBB.git /home/nodebb
+git clone -b v1.13.x https://github.com/NodeBB/NodeBB.git /home/nodebb
 cd nodebb/
 echo "[#] 需要手动到http://服务器公网IP:4567进行网页配置"
 sleep 15
@@ -94,9 +94,9 @@ echo 'Restart=always' >> /lib/systemd/system/nodebb.service
 echo "" >> /lib/systemd/system/nodebb.service
 echo '[Install]' >> /lib/systemd/system/nodebb.service
 echo 'WantedBy=multi-user.target' >> /lib/systemd/system/nodebb.service
-systemctl enable nodebb
+systemctl enable nodebb.service
 
+echo "[#] 网页配置确认后的第二次编译完成后按两次Ctrl+C结束(可能为新版NodeBB的Bug) 自行启动使用./nodebb start 配置完成 结束进程"
 echo "[#] 如果完成了网页配置，那么本次自动配置完成，网页Nginx代理(映射4567端口)请自行设置，或等待作者写完NodeBB映射配置"
 echo "[#] TPLAPETA Inc. - DragonRiverWorld INT Automaic Script - By.TP211 - OpenSource Pubilc"
-echo "[#] 本脚本作者：TP211 自行启动使用./nodebb start 配置完成 结束进程"
 exit 0
