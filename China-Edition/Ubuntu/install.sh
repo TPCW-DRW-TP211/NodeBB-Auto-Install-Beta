@@ -1,6 +1,5 @@
 #!/bin/bash
-PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
-export PATH
+echo "[#] 未实现检测系统功能，本脚本仅限于Ubuntu系统！！！"
 
 # 检查账户是否为root
 if [ $(id -u) != "0" ]; then
