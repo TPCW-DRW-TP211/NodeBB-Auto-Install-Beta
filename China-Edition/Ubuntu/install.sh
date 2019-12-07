@@ -18,7 +18,7 @@ add-apt-repository -y ppa:chris-lea/redis-server
 apt-get update
 
 echo "[+] 安装NVM并安装/配置nodejs"
-curl -o- https://raw.githubusercontent.com/creationix/nvm/v0.33.8/install.sh | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/master/install.sh | bash
 sleep 5
 source ~/.bashrc && echo "1"
 export NVM_NODEJS_ORG_MIRROR=https://npm.taobao.org/mirrors/node
