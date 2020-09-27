@@ -26,4 +26,24 @@ elif["$(expr substr $(uname -s) 1 5)"=="Linux"];then
         echo "[#] 错误: 你必须使用root权限运行本脚本！"
         exit 1
     fi
+    ## DISTRO是系统发行版名称，PM为指定的包管理器
+    echo "[#] 检测系统发行版和指定包管理器"
+    if grep -Eqi "CentOS" /etc/issue || grep -Eq "CentOS" /etc/*-release; then
+        DISTRO='CentOS'
+        PM='yum'
+    elif grep -Eqi "Red Hat Enterprise Linux" /etc/issue || grep -Eq "Red Hat Enterprise Linux" /etc/*-release; then
+        DISTRO='RHEL'
+        PM='yum'
+    elif grep -Eqi "Fedora" /etc/issue || grep -Eq "Fedora" /etc/*-release; then
+        DISTRO='Fedora'
+        PM='yum'
+    elif grep -Eqi "Debian" /etc/issue || grep -Eq "Debian" /etc/*-release; then
+        DISTRO='Debian'
+        PM='apt'
+    elif grep -Eqi "Ubuntu" /etc/issue || grep -Eq "Ubuntu" /etc/*-release; then
+        DISTRO='Ubuntu'
+        PM='apt'
+    else
+        DISTRO='Unknown'
+    fi
 fi
