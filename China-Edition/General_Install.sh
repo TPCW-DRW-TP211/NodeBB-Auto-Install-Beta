@@ -43,6 +43,12 @@ elif["$(expr substr $(uname -s) 1 5)"=="Linux"];then
     elif grep -Eqi "Ubuntu" /etc/issue || grep -Eq "Ubuntu" /etc/*-release; then
         DISTRO='Ubuntu'
         PM='apt'
+    elif grep -Eqi "Arch Linux" /etc/issue || grep -Eq "Arch Linux" /etc/*-release; then
+        DISTRO='Arch'
+        PM='pacman'
+    elif grep -Eqi "Manjaro Linux" /etc/issue || grep -Eq "Manjaro" /etc/*-release; then
+        DISTRO='Manjaro'
+        PM='pacman'
     else
         DISTRO='Unknown'
     fi
